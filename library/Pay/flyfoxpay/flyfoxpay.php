@@ -92,7 +92,7 @@ class flyfoxpay
 	public function pay($payconfig,$params)
 	{
 		try{
-	$return='https://'.$_SERVER['HTTP_HOST'].'/query/auto/'.$params['orderid'].'.html';
+	$return='https://'.$_SERVER['HTTP_HOST'].'/product/notify/?paymethod=flyfoxpay';
 		$pays = new Pays($payconfig['app_id'], $payconfig['app_secret']);
 //支付方式
 $type = 'all';
