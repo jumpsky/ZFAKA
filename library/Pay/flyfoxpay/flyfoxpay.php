@@ -93,6 +93,7 @@ class flyfoxpay
 	{
 		try{
 	$return='https://'.$_SERVER['HTTP_HOST'].'/product/notify/?paymethod=flyfoxpay';
+          $return1='https://'.$_SERVER['HTTP_HOST'].'/query/auto/'.$params['orderid'].'.html';
 		$pays = new Pays($payconfig['app_id'], $payconfig['app_secret']);
 //支付方式
 $type = 'all';
@@ -101,7 +102,7 @@ $out_trade_no = $params['orderid'];
 //异步通知地址
 $notify_url = $return;
 //回调通知地址
-$return_url = $return;
+$return_url = $return1;
 //商品名称
 $name = '虛擬商品';
 //支付金额（保留小数点后两位）
